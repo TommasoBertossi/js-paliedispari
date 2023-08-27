@@ -4,8 +4,11 @@ let chooseNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
 function random() {
     let randomNumber = Math.floor(Math.random() * 4 + 1);
 
-    return random;
+    return randomNumber;
 }
+
+const computerResult = "Il computer ha scelto " + random;
+document.getElementById("numero").innerHTML = computerResult;
 
 let sum = chooseNumber + random();
 
@@ -17,13 +20,15 @@ function isOddOrEven(number) {
         result = ("dispari")
     }
 
-    return isOddOrEven;
+    return result;
 }
 
-isOddOrEven(sum);
+const finalResult = isOddOrEven(sum);
 
-if (result == oddOrEven) {
-    document.getElementById(numero).innerHTML = ("Hai vinto")
+
+
+if (finalResult == oddOrEven) {
+    document.getElementById("numero").innerHTML = ("Hai vinto")
 } else {
-    document.getElementById(numero).innerHTML = ("Hai vinto")
+    document.getElementById("numero").innerHTML = ("Hai perso")
 }

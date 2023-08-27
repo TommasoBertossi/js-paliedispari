@@ -1,15 +1,14 @@
 let userWorld = prompt("Inserisci una parola");
 let worldLength = userWorld.length;
-let palindromaWorld = "";
 console.log(userWorld);
 
-function palindroma() {
-for (let i = worldLength -1; i >= 0; i--) {
-     palindromaWorld += userWorld[i];
+function palindroma(parola) {
+    let palindromaWorld = "";
+for (let i = parola.length -1; i >= 0; i--) {
+     palindromaWorld += parola[i];
     }
-    
-    return palindroma;
-    
+    console.log(palindromaWorld);
+    return palindromaWorld
 }
 
-
+console.log(palindroma(userWorld));
